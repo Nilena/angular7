@@ -1,0 +1,42 @@
+<div *ngIf="receiveempty" class ='main'>
+  <!-- <a class="btn btn-success out" style="float:right">Logout</a> -->
+  <a class="btn btn-success add" routerLink ="/register">NewUser</a>
+  <h4 style='text-align:center'>Please Register here</h4>
+</div>
+    <div *ngIf="itemArray" class="container">
+        <!-- <a class="btn btn-success" style="float:right">Logout</a> -->
+        <a class="btn btn-success out" routerLink ="/register">NewUser</a>
+    <br>
+    <br>
+      <h2>User Details</h2>
+                 
+      <table class="table">
+        <thead>
+          <tr>
+          <th>ID</th>
+            <th>Firstname</th>
+            <th>Email</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor = "let receive of itemArray; let i = index">
+            <td>{{ i + 1}}</td>
+           <td>
+            {{receive.firstname}}
+           </td> 
+           <td>
+            {{receive.mobile}}
+           </td> 
+           <td>
+            {{receive.email}}
+           </td>
+            <td><button type="button" class="btn btn-primary"(click)="edit(i)">Edit</button>
+            <td><button type="button" class="btn btn-warning" (click)= "remove(i)">Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- {{subscription.message}} -->
+    </div>
+
+    

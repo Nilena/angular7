@@ -1,0 +1,85 @@
+<!-- <input type="text" [formControl]="test"> {{test.value}} -->
+<form [formGroup] = "profileForm" (ngSubmit) = "onSubmit()">
+<div class="container">
+    <br>
+    <fieldset>
+      <br>
+      
+      <legend style="text-align:center"> Please Register </legend>
+      <div class="form-group">
+          <label for="text">FirstName :</label>
+          <div class="input-group">
+           <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+           <input type="text"  formControlName="firstname"  class="form-control" 
+             placeholder="Enter your first name" name="firstname"
+             tabindex="1">
+          </div>
+        </div>
+  
+        <div class="form-group">
+            <label for="Name">LastName :</label>
+            <div class="input-group">
+             <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+             <input type="text"  formControlName="lastname"  class="form-control" 
+             placeholder="Enter your last name" name="lastname"
+               tabindex="10">
+            </div>
+          </div>
+    
+  <div class="form-group">
+      <label for="mobile">Mobile:</label>
+      <div class="input-group">
+       <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+       <input type="text"  formControlName="mobile"  class="form-control" 
+        id="number" placeholder="Enter your mobile number" name="mobile"
+         tabindex="2">
+      </div>
+    </div>
+
+    <label for="gender">Gender:</label>
+    <div>
+      <label class="radio-inline"><input type="radio" formControlName="gender"  name="gender" value="male" tabindex="3" checked>Male</label>
+      <label class="radio-inline"><input type="radio" formControlName="gender"  name="gender" value="female" tabindex="3">Female</label>
+      <label class="radio-inline"><input type="radio" formControlName="gender" name="gender" value='others' tabindex="3">Others</label>
+    </div> 
+    <br>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+        <input type="text" formControlName="email" class="form-control"  id="email" placeholder="Enter your email" name="email"
+           tabindex="4">
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="pwd">Password:</label>
+        <div class="input-group">
+        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="password" class="form-control"formControlName="password" id="password" placeholder="Enter your password" name="password"
+          title="Make it hard to guess.(should contain atleast 6 to 20 char: one special char, one uppercase&lowercase and a digit"
+           tabindex="5">
+        </div>
+      </div>
+    
+    <div class="form-group">
+        <label for="pwd">Confirm Password:</label>
+        <div class="input-group">
+          <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+          <input type="password" class="form-control"formControlName="cnpassword" id="cnpassword" placeholder="Enter your password again" name="cnpassword"
+           tabindex="6">
+        </div>
+      </div>
+      <div class="form-group">
+          <label for="address">Address:</label>
+          <textarea class="form-control" rows="5" formControlName="address" id="address" placeholder="Enter your address" name="address"
+             tabindex="7">
+          </textarea>
+      </div>
+    <button type="submit" id="submit1" [disabled]="!profileForm.valid" class="btn btn-default" tabindex="8">Submit</button>
+    <button type="submit" id="submit2" class="btn btn-default" tabindex="11" data-toggle="modal" data-target="#myModal">
+      Cancel</button>
+  </fieldset>
+  </div>
+  </form>
+  <!-- <tableview></tableview> -->

@@ -1,0 +1,16 @@
+test
+<table *ngIf="data">
+  <!-- ADD HEADERS -->
+  <tr>
+      <th>category</th>
+          <th>Type of questions</th> 
+              <th>Questions</th>
+  </tr>
+
+  <!-- BIND ARRAY TO TABLE -->
+  <tr *ngFor="let bird of data.results">
+      <td>{{bird.category}}</td>
+          <td>{{bird.type}}</td>
+              <td>{{bird.question}}</td>
+  </tr>
+</table>

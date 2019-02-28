@@ -1,0 +1,73 @@
+ul {
+	list-style-type:none;
+	width: 100%;
+}
+li{
+	width: 90%;
+    margin-bottom: 15px;
+	position: relative;
+}
+.error{
+	outline:  1px solid red;
+}
+input[ type="text"]{
+	width:90%;
+    padding: 10px;
+    border: 1px solid black;
+}
+.add{
+	font-size: 15px;
+    padding: 10px;
+    border: 1px solid black;
+}
+.container{
+    border: 1px solid white;
+    width: 60%;
+    min-height: 600px;
+    margin-left:250px;
+    padding: 50px;
+    margin-top:40px;
+    background-color:  #b2beb5;
+    border: 1px solid black;
+}
+.menu {
+	display: flex;
+	position: relative;
+	width: 90%;
+	margin: auto;
+}
+.filter{
+    padding: 8px;
+	border-radius: 5px;
+	text-align: center;
+	width: 100%;
+}
+.strikeOf{
+text-decoration: line-through;
+text-align: left;
+}
+.textArray{
+    float: left !important;
+}
+
+.delete{
+    color:red;
+	right: 10px;
+	text-align: center;
+}
+.changer{
+    color:green;
+	right:100px;
+}
+.delete,.changer{
+    border-radius: 5px;
+	position: absolute;
+	font-size: 12px;
+	padding: 5px;
+	top:-10px;
+	width: 100px;
+	text-align: center;
+}
+.index{
+    float: left;
+}

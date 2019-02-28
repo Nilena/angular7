@@ -1,0 +1,25 @@
+<div class="container">
+  <div>
+    <input [ngClass]="{error: error == true}" type="text" [(ngModel)] = "AddedItems" placeholder="Add items" required>
+    <button (click)="addFunc()" class ="add"> Add </button> 
+  
+  </div>
+  <div class="menu">
+      <button class =" add filter" (click) ="filter('')">All</button>
+      <button  class =" add filter"(click) ="filter('true')">Completed</button>
+      <button  class =" add filter" (click) ="filter('false')">Pending</button>
+    </div>
+  <ul>
+   <li *ngFor ="let item of (itemArray | myFilter: activeFlag ); let i = index ">
+      <span [class.strikeOf]="item.status==true">
+         <span class="index">{{i+1 }}</span> 
+         <span>{{item.newtodo}}</span>
+         </span>
+      <button class ="delete" (click)="delete(i)"> Delete</button>
+      <button   class ="changer"(click)="statuschanger(i)">Completed</button>
+    </li>
+  </ul> 
+</div>
+
+
+<!-- (item | myFilter: activeFlag ) -->

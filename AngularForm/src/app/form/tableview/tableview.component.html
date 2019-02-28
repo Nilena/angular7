@@ -1,0 +1,30 @@
+<app-basicform [dataString]="dataToParent" (ev)="getData($event)"></app-basicform>
+<div class="container">
+    <button type="button" style="float:right" class="btn btn-info btn-lg" ng-click='logout()'>Logout</button>
+    <a class="btn btn-success" href="#!/userregistration">NewUser</a>
+    <br>
+    <br>
+      <h2>User Details</h2>
+                 
+      <table class="table">
+        <thead>
+          <tr>
+          <th>ID</th>
+            <th>Firstname</th>
+            <th>Email</th>
+            <th>Options</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr >
+            <!-- <td>{{ 1 }}</td>
+            <td>{{evReceive.controls.firstname.value}}</td> -->
+            <!-- <td>{{user.mobile}}</td>
+            <td>{{user.email}}</td> -->
+            <td><button type="button" class="btn btn-primary" ng-click='edituserDetails(userlist.indexOf(user))'>Edit</button>
+    <button type="button" class="btn btn-warning" ng-click='removeuserDetails(userlist.indexOf(user))'>Delete</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
